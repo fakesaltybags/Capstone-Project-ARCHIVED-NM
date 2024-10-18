@@ -14,6 +14,9 @@
     "categories": {
       "auth": {
         "capstoneproject142b68b2": {}
+      },
+      "function": {
+        "GetUser": {}
       }
     }
   }

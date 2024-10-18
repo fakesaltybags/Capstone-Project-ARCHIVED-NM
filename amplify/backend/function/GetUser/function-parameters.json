@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "auth": {
+      "capstoneproject142b68b2": [
+        "read"
+      ]
+    }
+  },
+  "lambdaLayers": []
+}

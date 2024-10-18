@@ -1,23 +1,35 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchProjects } from '../redux/projectSlice';
+import React from 'react';
+import '../styles/ProjectPage.css';
+import Header from '../components/Header';
 
 const ProjectPage = () => {
-    const dispatch = useDispatch();
-    const projects = useSelector((state) => state.projects.items);
+    const handleCreate = () => {
+        console.log('Create project');
+    };
 
-    useEffect(() => {
-        dispatch(fetchProjects());
-    }, [dispatch]);
+    const handleUpdate = () => {
+        console.log('Update project');
+    };
+
+    const handleDelete = () => {
+        console.log('Delete project');
+    };
 
     return (
-        <div>
-            <h2>Projects</h2>
-            <ul>
-                {projects.map((project) => (
-                    <li key={project.id}>{project.name}</li>
-                ))}
-            </ul>
+        <div className="project-container">
+            <Header />
+            <h1 className="project-title">Project Page</h1>
+            <div className="wip-box">
+                <h2 className="wip-title">Code Editor (WIP)</h2>
+                <p>This section will contain the code editor.</p>
+                {/* WIP Code Editor */}
+                <textarea className="code-editor" placeholder="Write your code here..."></textarea>
+            </div>
+            <div className="button-container">
+                <button className="project-button" onClick={handleCreate}>Create Project</button>
+                <button className="project-button" onClick={handleUpdate}>Update Project</button>
+                <button className="project-button" onClick={handleDelete}>Delete Project</button>
+            </div>
         </div>
     );
 };
