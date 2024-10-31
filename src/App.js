@@ -7,6 +7,7 @@ import AboutPage from './pages/AboutPage.js';
 import ContactPage from './pages/ContactPage.js';
 import ProfilePage from './pages/ProfilePage.js';
 import AuthenticatorWrapper from './components/AuthenticatorWrapper.js';
+import AdminPage from './pages/AdminPage.js';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/profile" element={<AuthenticatorWrapper><ProfilePage /></AuthenticatorWrapper>} />
+        <Route path="/admin" element={<AdminPage />} />
         <Route path='*' element={<Navigate to="/"/>}/>
       </Routes>
     </Router>

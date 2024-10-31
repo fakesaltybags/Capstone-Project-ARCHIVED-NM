@@ -19,9 +19,11 @@ const Login = () => {
     }, [user, navigate]);
 
     return (
-        <div>
+        <div className='login-container'>
             <Header />
-            <h2>Welcome, {user ? user.username : 'Guest'}</h2>
+            <div className='login-content'>
+                <h2 className='welcome-message'>Welcome, {user ? user.username : 'Guest'}</h2>
+            </div>
         </div>
     );
 };
