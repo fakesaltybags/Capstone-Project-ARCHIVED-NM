@@ -1,11 +1,9 @@
 import React from 'react';
 import '../styles/ContactPage.css';
-import Header from '../components/Header';
 
 const ContactPage = () => {
     return (
         <div className="contact-container">
-            <Header />
             <h1 className="contact-title">Contact Me</h1>
             <p className="contact-text">
                 Feel free to reach out if you have any questions or comments regarding the project!

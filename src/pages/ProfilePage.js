@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useAuthenticator } from '@aws-amplify/ui-react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/ProfilePage.css';
-import Header from '../components/Header';
 
 const ProfilePage = () => {
     const { user, signOut } = useAuthenticator((context) => [context.user, context.signOut]);
@@ -51,7 +50,6 @@ const ProfilePage = () => {
 
     return (
         <div className='profile-container'>
-            <Header />
             <h1 className='profile-title'>Profile Page</h1>
             {userData ? (
                 <>
